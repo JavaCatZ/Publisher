@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  shutdown: graceful
+  forward-headers-strategy: framework
+  servlet:
+    context-path: ${SERVER_CONTEXT_PATH:}
+
+api:
+  subscriber:
+    url: localhost:9000
+    thread-count: 5
+
+logging:
+  level:
+    com.test: debug
+  file:
+    path: logs
